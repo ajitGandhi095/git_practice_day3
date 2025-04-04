@@ -1,0 +1,12 @@
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i  # Target found, return index
+    return -1  # Target not found
+
+# Example usage:
+arr = [10, 20, 30, 40, 50]
+target = 30
+result = linear_search(arr, target)
+print("Element found at index:", result)  # Output: Element found at index: 2
+
