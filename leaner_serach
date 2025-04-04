@@ -1,12 +1,16 @@
-def linear_search(arr, target):
-    for i in range(len(arr)):
-        if arr[i] == target:
-            return i  # Target found, return index
-    return -1  # Target not found
+def linear_search_recursive(arr, target, index=0):
+    if index >= len(arr):
+            return -1  # Base case: target not found
 
-# Example usage:
-arr = [10, 20, 30, 40, 50]
-target = 30
-result = linear_search(arr, target)
-print("Element found at index:", result)  # Output: Element found at index: 2
+	        if arr[index] == target:
+		        return index  # Target found
+
+			    return linear_search_recursive(arr, target, index + 1)  # Search in the next index
+
+			    # Example usage:
+			    arr = [10, 20, 30, 40, 50]
+			    target = 30
+			    result = linear_search_recursive(arr, target)
+			    print("Element found at index:", result)  # Output: Element found at index: 2
+
 
